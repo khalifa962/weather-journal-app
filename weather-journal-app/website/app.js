@@ -39,7 +39,7 @@ async function getTemprature(apiURL, zipCode, APiKey) {
     return temprature
 }
 /* Function to POST data */
-async function getWeatherData(result, feelings) {
+async function getWeatherData(temprature, feelings) {
     await fetch('/PostProjectData', {
         method: "POST",
         credentials: "same-origin",
